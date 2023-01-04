@@ -246,7 +246,7 @@ class AboutScreen extends StatelessWidget {
     if (await canLaunchUrlString(url)) {
       await launch(url);
     } else {
-      print('Could not launch $url');
+
     }
   }
 }

@@ -51,7 +51,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             Column(
               children: [
                 Text(
-                  'Hello Muhammad',
+                  'Hello',
                   style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w900,
@@ -72,7 +72,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               ],
             ),
             const SizedBox(
-              height: 20,
+              height: 20
             ),
             Expanded(
               child: Container(
