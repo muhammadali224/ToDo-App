@@ -330,7 +330,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
   _getTimeFromUser({required bool isStartTime}) async {
     TimeOfDay? pickedTime = await showTimePicker(
-      initialEntryMode: TimePickerEntryMode.input,
+
       context: context,
       initialTime: isStartTime
           //set the start time and time

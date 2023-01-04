@@ -152,7 +152,7 @@ class AboutScreen extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  'This program was created by\nMuhammad Ali\nOne of the programmers on\nbarmaja FB \nHassan Fleih course\non the Udemy\nThe code can be found on :',
+                  'This program was created by\nMuhammad Ali\nOne of the programmers on\nbarmaja FB\nThe code can be found on :',
                   textAlign: TextAlign.center,
                   style: titleStyle,
                 ),
