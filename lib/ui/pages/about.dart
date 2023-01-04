@@ -69,7 +69,7 @@ class AboutScreen extends StatelessWidget {
                 GestureDetector(
                   onTap: () => _launchURL(
                       userUrl:
-                          'https://github.com/muhammadali224?tab=projects'),
+                          'https://github.com/muhammadali224/ToDo-App'),
                   child: CircleAvatar(
                     radius: 30,
                     backgroundColor: context.theme.colorScheme.background,
@@ -162,7 +162,7 @@ class AboutScreen extends StatelessWidget {
                     GestureDetector(
                       onTap: () => _launchURL(
                           userUrl:
-                              'https://github.com/muhammadali224?tab=projects'),
+                              'https://github.com/muhammadali224/ToDo-App'),
                       child: CircleAvatar(
                         radius: 30,
                         backgroundColor: context.theme.colorScheme.background,
