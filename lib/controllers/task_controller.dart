@@ -1,4 +1,3 @@
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:todo/db/db_helper.dart';
 import 'package:todo/models/task.dart';
@@ -14,8 +13,8 @@ class TaskController extends GetxController {
   Future<void> getTask() async {
     final List<Map<String, dynamic>> tasks = await DBHelper.query();
     taskList.assignAll(tasks.map((data) => Task.fromJson(data)).toList());
-
   }
+
 // delete data from DB
   void deleteTask(Task task) async {
     await DBHelper.delete(task);
@@ -28,7 +27,6 @@ class TaskController extends GetxController {
 
     getTask();
   }
-
 
 // update isCompleted data from DB
   void markTaskCompleted(int id) async {

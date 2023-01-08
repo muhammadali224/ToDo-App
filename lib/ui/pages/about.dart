@@ -68,8 +68,7 @@ class AboutScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () => _launchURL(
-                      userUrl:
-                          'https://github.com/muhammadali224/ToDo-App'),
+                      userUrl: 'https://github.com/muhammadali224/ToDo-App'),
                   child: CircleAvatar(
                     radius: 30,
                     backgroundColor: context.theme.colorScheme.background,
@@ -244,9 +243,8 @@ class AboutScreen extends StatelessWidget {
         });
     String url = param.toString();
     if (await canLaunchUrlString(url)) {
+      // ignore: deprecated_member_use
       await launch(url);
-    } else {
-
-    }
+    } else {}
   }
 }

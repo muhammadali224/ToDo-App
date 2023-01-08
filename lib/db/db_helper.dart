@@ -1,4 +1,3 @@
-
 import 'package:sqflite/sqflite.dart';
 
 import '../models/task.dart';
@@ -38,9 +37,8 @@ class DBHelper {
             );
           },
         );
-
       } catch (e) {
-        print(e);
+        // catch the error
       }
     }
   }
@@ -48,13 +46,13 @@ class DBHelper {
 // insert data to table
   static Future<int> insert(Task? task) async {
     return await _db!.insert(_tableName, task!.toJson());
-
   }
 
 // delete data from table where id is equal id
   static Future<int> delete(Task task) async {
     return await _db!.delete(_tableName, where: 'id=?', whereArgs: [task.id]);
   }
+
   static Future<int> deleteAll() async {
     return await _db!.delete(_tableName);
   }
