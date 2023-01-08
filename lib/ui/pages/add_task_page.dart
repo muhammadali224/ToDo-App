@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -15,6 +17,7 @@ class AddTaskPage extends StatefulWidget {
 }
 
 class _AddTaskPageState extends State<AddTaskPage> {
+  // ignore: prefer_final_fields
   TaskController _taskController = Get.put(TaskController());
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _noteController = TextEditingController();
@@ -221,6 +224,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
   }
 
   _addTaskToDB() async {
+    // ignore: unused_local_variable
     int value = await _taskController.addTask(
       task: Task(
         title: _titleController.text,
@@ -267,7 +271,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
     // this index allow me to check what user color pressed and put in
     // middle a small tick from icon
     return Column(
-      crossAxisAlignment:CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           'Color',
@@ -330,7 +334,6 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
   _getTimeFromUser({required bool isStartTime}) async {
     TimeOfDay? pickedTime = await showTimePicker(
-
       context: context,
       initialTime: isStartTime
           //set the start time and time
