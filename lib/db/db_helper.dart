@@ -23,17 +23,17 @@ class DBHelper {
             await db.execute(
               //create all field for table
               'CREATE TABLE $_tableName ('
-              'id INTEGER PRIMARY KEY AUTOINCREMENT, '
-              'title STRING,'
-              'note TEXT,'
-              'date STRING,'
-              'startTime STRING,'
-              'endTime STRING,'
-              'remind INTEGER,'
-              'repeat STRING,'
-              'color INTEGER,'
-              'isComplete INTEGER'
-              ')',
+                  'id INTEGER PRIMARY KEY AUTOINCREMENT, '
+                  'title STRING,'
+                  'note TEXT,'
+                  'date STRING,'
+                  'startTime STRING,'
+                  'endTime STRING,'
+                  'remind INTEGER,'
+                  'repeat STRING,'
+                  'color INTEGER,'
+                  'isComplete INTEGER'
+                  ')',
             );
           },
         );
@@ -50,7 +50,7 @@ class DBHelper {
 
 // delete data from table where id is equal id
   static Future<int> delete(Task task) async {
-    return await _db!.delete(_tableName, where: 'id=?', whereArgs: [task.id]);
+    return await _db!.delete(_tableName, where: 'id=?', whereArgs: [task.id,],);
   }
 
   static Future<int> deleteAll() async {
